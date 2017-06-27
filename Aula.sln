@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Presentation", "0 - Presentation", "{434B46B1-BF06-4F75-8ECD-CC4881A04869}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Services", "1 - Services", "{4B8076AA-566B-4FB2-8A61-4B415D250507}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{9D7EF3BA-9F76-4B12-855C-D2EBC967D259}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{5E62A1BF-AB21-45C2-92EB-65339FF5B0D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{E521D155-E5E1-46E4-A1FB-C3C8E8BEF820}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", "{AE347245-8D9B-4EF0-89CF-2FA404115597}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - CrossCutting", "4.2 - CrossCutting", "{75223EBC-B632-4017-AEBB-EB73DE55AE8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RM.Aula.Domain", "RM.Aula.Domain\RM.Aula.Domain.csproj", "{E9148BFF-D3CB-4006-9EB1-11379BD937C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RM.Aula.Infra.Data", "RM.Aula.Infra.Data\RM.Aula.Infra.Data.csproj", "{1FA17EF9-5675-4496-AF49-FF51E8171CBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RM.Aula.Application", "RM.Aula.Application\RM.Aula.Application.csproj", "{400C330E-3C6B-42C6-9351-1856835E9497}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartAdminMvc", "UI\webapp\SmartAdminMvc.csproj", "{24CA74F5-6AF8-4C67-AC79-3E648ECBEA68}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E9148BFF-D3CB-4006-9EB1-11379BD937C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9148BFF-D3CB-4006-9EB1-11379BD937C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9148BFF-D3CB-4006-9EB1-11379BD937C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9148BFF-D3CB-4006-9EB1-11379BD937C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FA17EF9-5675-4496-AF49-FF51E8171CBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FA17EF9-5675-4496-AF49-FF51E8171CBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FA17EF9-5675-4496-AF49-FF51E8171CBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FA17EF9-5675-4496-AF49-FF51E8171CBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{400C330E-3C6B-42C6-9351-1856835E9497}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{400C330E-3C6B-42C6-9351-1856835E9497}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{400C330E-3C6B-42C6-9351-1856835E9497}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{400C330E-3C6B-42C6-9351-1856835E9497}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24CA74F5-6AF8-4C67-AC79-3E648ECBEA68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24CA74F5-6AF8-4C67-AC79-3E648ECBEA68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24CA74F5-6AF8-4C67-AC79-3E648ECBEA68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24CA74F5-6AF8-4C67-AC79-3E648ECBEA68}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AE347245-8D9B-4EF0-89CF-2FA404115597} = {E521D155-E5E1-46E4-A1FB-C3C8E8BEF820}
+		{75223EBC-B632-4017-AEBB-EB73DE55AE8D} = {E521D155-E5E1-46E4-A1FB-C3C8E8BEF820}
+		{E9148BFF-D3CB-4006-9EB1-11379BD937C0} = {5E62A1BF-AB21-45C2-92EB-65339FF5B0D6}
+		{1FA17EF9-5675-4496-AF49-FF51E8171CBB} = {AE347245-8D9B-4EF0-89CF-2FA404115597}
+		{400C330E-3C6B-42C6-9351-1856835E9497} = {9D7EF3BA-9F76-4B12-855C-D2EBC967D259}
+		{24CA74F5-6AF8-4C67-AC79-3E648ECBEA68} = {434B46B1-BF06-4F75-8ECD-CC4881A04869}
+	EndGlobalSection
+EndGlobal
