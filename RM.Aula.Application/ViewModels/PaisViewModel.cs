@@ -9,6 +9,8 @@ namespace RM.Aula.Application.ViewModels
 {
     public class PaisViewModel
     {
+        public Guid Id { get; set; }
+
         [Required(ErrorMessage = "Preencha a Sigla")]
         [MaxLength(8, ErrorMessage = "Máximo {0} caracteres")]
         [MinLength(8, ErrorMessage = "Mínimo {0} caracteres")]

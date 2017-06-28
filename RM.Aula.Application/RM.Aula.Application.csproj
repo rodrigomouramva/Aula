@@ -48,8 +48,10 @@
     <Compile Include="AutoMapper\DomainToViewModelMappings.cs" />
     <Compile Include="AutoMapper\ToViewModelDomainMappings.cs" />
     <Compile Include="Interfaces\IClienteAppService.cs" />
+    <Compile Include="Interfaces\IPaisAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ClienteAppService.cs" />
+    <Compile Include="Services\PaisAppService.cs" />
     <Compile Include="ViewModels\ClienteEnderecoViewModel.cs" />
     <Compile Include="ViewModels\ClienteViewModel.cs" />
     <Compile Include="ViewModels\EnderecoViewModel.cs" />

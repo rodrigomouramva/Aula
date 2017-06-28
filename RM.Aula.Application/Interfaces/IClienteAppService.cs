@@ -9,9 +9,7 @@ namespace RM.Aula.Application.Interfaces
 {
     public interface IClienteAppService : IDisposable
     {
-        ClienteEnderecoViewModel Adicionar(ClienteEnderecoViewModel clienteEnderecoViewModel);
-
-       
+        ClienteEnderecoViewModel Adicionar(ClienteEnderecoViewModel clienteEnderecoViewModel);        
         ClienteViewModel ObterPorId(Guid id);
         IEnumerable<ClienteViewModel> ObteTodos();
         IEnumerable<ClienteViewModel> ObterAtivos();

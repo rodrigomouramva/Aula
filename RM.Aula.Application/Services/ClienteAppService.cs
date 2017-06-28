@@ -15,6 +15,7 @@ namespace RM.Aula.Application.Services
     public class ClienteAppService : IClienteAppService
     {
         private readonly IClienteRepository _clienteRepository;
+
         public ClienteAppService()
         {
             _clienteRepository = new ClienteRepository();
@@ -38,6 +39,8 @@ namespace RM.Aula.Application.Services
         {
             _clienteRepository.Dispose();
         }
+        
+
         public IEnumerable<ClienteViewModel> ObterAtivos()
         {
             return Mapper.Map<IEnumerable<ClienteViewModel>>(_clienteRepository.ObterTodos());

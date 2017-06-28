@@ -9,10 +9,15 @@ namespace SmartAdminMvc.Controllers
     public class ClientesController : Controller
     {
         private readonly IClienteAppService _clienteAppService;
+        private readonly IPaisAppService _paisAppService;
+
         public ClientesController()
         {
             _clienteAppService = new ClienteAppService();
+            _paisAppService = new PaisAppService();
         }        
+
+
         public ActionResult Index()
         {
             return View(_clienteAppService.ObterAtivos());
@@ -33,15 +38,10 @@ namespace SmartAdminMvc.Controllers
 
         public ActionResult Create()
         {
-
-
-
-
-
+            ViewBag.ListaPaises = new SelectList(_paisAppService.ObteTodos(),"Id","Descricao");
             return View();
         }        
-
-
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(ClienteEnderecoViewModel clienteenderecoViewModel)

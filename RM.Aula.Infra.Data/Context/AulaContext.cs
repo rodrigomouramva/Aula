@@ -27,6 +27,9 @@ namespace RM.Aula.Infra.Data.Context
             modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
             modelBuilder.Configurations.Add(new ClienteConfig());
             modelBuilder.Configurations.Add(new EnderecoConfig());
+            modelBuilder.Configurations.Add(new CidadeConfig());
+            modelBuilder.Configurations.Add(new EstadoConfig());
+            modelBuilder.Configurations.Add(new PaisConfig());
 
             modelBuilder.Properties<string>()
                 .Configure(x => x.HasColumnType("varchar"));

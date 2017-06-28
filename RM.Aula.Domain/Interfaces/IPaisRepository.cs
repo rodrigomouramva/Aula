@@ -9,6 +9,6 @@ namespace RM.Aula.Domain.Interfaces
 {
     public interface IPaisRepository : IRepository<Pais>
     {
-        IEnumerable<Pais> ObterPais();
+       
     }
 }

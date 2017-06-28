@@ -10,9 +10,6 @@ namespace RM.Aula.Infra.Data.Repositories
 {
     public class PaisRepository : Repository<Pais>, IPaisRepository
     {
-        public IEnumerable<Pais> ObterPais()
-        {
-            return Buscar(p => p.Id != null);
-        }
+        
     }
 }
