@@ -21,6 +21,7 @@ namespace RM.Aula.Application.Services
         public IEnumerable<PaisViewModel> ObteTodos()
         {
             return Mapper.Map<IEnumerable<PaisViewModel>>(_paisRepository.ObterTodos());
+            //return Mapper.Map<IEnumerable<PaisViewModel>>(_paisRepository.ObterTodos());
         }
     }
 }

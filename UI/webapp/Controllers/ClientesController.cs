@@ -11,25 +11,27 @@ namespace SmartAdminMvc.Controllers
         private readonly IClienteAppService _clienteAppService;
         private readonly IPaisAppService _paisAppService;
         private readonly IEstadoAppService _estadoAppService;
+        private readonly ICidadeAppService _cidadeAppService;
 
         public ClientesController()
         {
             _clienteAppService = new ClienteAppService();
             _paisAppService = new PaisAppService();
             _estadoAppService = new EstadoAppService();
-        }        
+            _cidadeAppService = new CidadeAppService();
+        }
 
 
         public ActionResult Index()
         {
             return View(_clienteAppService.ObterAtivos());
-        }        
+        }
         public ActionResult Details(Guid? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }            
+            }
             var clienteViewModel = _clienteAppService.ObterPorId(id.Value);
             if (clienteViewModel == null)
             {
@@ -40,11 +42,12 @@ namespace SmartAdminMvc.Controllers
 
         public ActionResult Create()
         {
-            ViewBag.ListaPaises = new SelectList(_paisAppService.ObteTodos(),"Id","Descricao");
+            ViewBag.ListaPaises = new SelectList(_paisAppService.ObteTodos(), "Id", "Descricao");
             ViewBag.ListaEstados = new SelectList(_estadoAppService.ObteTodos(), "Id", "Descricao");
+            ViewBag.ListaCidade = new SelectList(_cidadeAppService.ObteTodos(), "Id", "Cidades");
             return View();
-        }        
-        
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(ClienteEnderecoViewModel clienteenderecoViewModel)
@@ -68,7 +71,7 @@ namespace SmartAdminMvc.Controllers
                 return HttpNotFound();
             }
             return View(clienteViewModel);
-        }        
+        }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(ClienteViewModel clienteViewModel)
@@ -92,7 +95,7 @@ namespace SmartAdminMvc.Controllers
                 return HttpNotFound();
             }
             return View(clienteViewModel);
-        }        
+        }
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(Guid id)
