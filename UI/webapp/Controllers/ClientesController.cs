@@ -41,7 +41,7 @@ namespace SmartAdminMvc.Controllers
         public ActionResult Create()
         {
             ViewBag.ListaPaises = new SelectList(_paisAppService.ObteTodos(),"Id","Descricao");
-            ViewBag.ListaEstados = new SelectList(_paisAppService.ObteTodos(), "Id", "Descricao");
+            ViewBag.ListaEstados = new SelectList(_estadoAppService.ObteTodos(), "Id", "Descricao");
             return View();
         }        
         

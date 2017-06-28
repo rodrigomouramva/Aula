@@ -162,7 +162,11 @@
                                                         <div class="form-group">
                                                             <div class="input-group">
                                                                 <span class="input-group-addon"><i class="fa fa-map-marker fa-lg fa-fw"></i></span>
-                                                                <select class="form-control input-lg" name="city">
+                                                               
+                                                                @Html.DropDownList("ListaPaises", null, new { @class = "form-control input-lg", @placeholder = "Selecione o estado", })
+                                                                                                                              
+                                                                
+                                                                @*<select class="form-control input-lg" name="city">
                                                                     <option value="" selected="selected">Select City</option>
                                                                     <option>Amsterdam</option>
                                                                     <option>Atlanta</option>
@@ -184,7 +188,7 @@
                                                                     <option>Mexico City</option>
                                                                     <option>Miami</option>
                                                                     <option>Minneapolis</option>
-                                                                </select>
+                                                                </select>*@
                                                             </div>
                                                         </div>
                                                     </div>
