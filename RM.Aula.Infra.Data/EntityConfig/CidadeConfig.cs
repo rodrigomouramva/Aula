@@ -13,10 +13,9 @@ namespace RM.Aula.Infra.Data.EntityConfig
         public CidadeConfig()
         {
             HasKey(c => c.Id);
-
+            
             HasRequired(e => e.Estados)
-                .WithMany()
-                .HasForeignKey(p => p.IdEstado);
+                .WithRequiredPrincipal(c => c.Cidades);
 
             ToTable("Cidades");
         }

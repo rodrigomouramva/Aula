@@ -20,7 +20,6 @@ namespace RM.Aula.Application.ViewModels
         [MaxLength(20, ErrorMessage = "Máximo {0} caracteres")]
         [MinLength(20, ErrorMessage = "Mínimo {0} caracteres")]
         public string Descricao { get; set; }
-
-        //public virtual EstadoViewModel Estados { get; set; }
+        public virtual EstadoViewModel Estados { get; set; }
     }
 }
