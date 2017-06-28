@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace RM.Aula.Application.Interfaces
 {
-    public interface IPaisAppService
+    public interface ICidadeAppService
     {
-       IEnumerable<PaisViewModel> ObteTodos();
+        IEnumerable<CidadeViewModel> ObteTodos();
     }
 }

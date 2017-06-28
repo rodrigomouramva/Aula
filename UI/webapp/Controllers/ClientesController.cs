@@ -10,11 +10,13 @@ namespace SmartAdminMvc.Controllers
     {
         private readonly IClienteAppService _clienteAppService;
         private readonly IPaisAppService _paisAppService;
+        private readonly IEstadoAppService _estadoAppService;
 
         public ClientesController()
         {
             _clienteAppService = new ClienteAppService();
             _paisAppService = new PaisAppService();
+            _estadoAppService = new EstadoAppService();
         }        
 
 
@@ -39,6 +41,7 @@ namespace SmartAdminMvc.Controllers
         public ActionResult Create()
         {
             ViewBag.ListaPaises = new SelectList(_paisAppService.ObteTodos(),"Id","Descricao");
+            ViewBag.ListaEstados = new SelectList(_paisAppService.ObteTodos(), "Id", "Descricao");
             return View();
         }        
         
