@@ -13,7 +13,6 @@ namespace RM.Aula.Infra.Data.EntityConfig
         public PaisConfig()
         {
             HasKey(p => p.Id);
-
             ToTable("Paises");
         }
     }

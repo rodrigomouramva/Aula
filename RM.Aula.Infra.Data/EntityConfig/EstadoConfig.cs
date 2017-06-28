@@ -12,10 +12,11 @@ namespace RM.Aula.Infra.Data.EntityConfig
     {
         public EstadoConfig()
         {
-            HasKey(e => e.Id);
+            HasKey(e => e.Id);           
+
             HasRequired(e => e.Pais)
-                .WithMany()
-                .HasForeignKey(p => p.IdPais);
+                .WithRequiredPrincipal(c => c.Estados);              
+
 
             ToTable("Estados");
         }
