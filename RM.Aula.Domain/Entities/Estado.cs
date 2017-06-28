@@ -12,6 +12,6 @@ namespace RM.Aula.Domain.Entities
         public string Descricao { get; set; }
         public Guid IdPais { get; set; }
         public virtual Pais Pais { get; set; }
-        public virtual Cidade Cidades { get; set; }
+        public virtual ICollection<Cidade> Cidades { get; set; }
     }
 }
