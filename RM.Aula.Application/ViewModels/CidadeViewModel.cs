@@ -9,10 +9,10 @@ namespace RM.Aula.Application.ViewModels
 {
     public class CidadeViewModel
     {
-        public CidadeViewModel()
-        {
-            Id = Guid.NewGuid();
-        }
+        //public CidadeViewModel()
+        //{
+        //    Id = Guid.NewGuid();
+        //}
         [Key]
         public Guid Id { get; set; }
         [Required(ErrorMessage = "Preencha a cidade")]

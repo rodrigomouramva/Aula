@@ -12,7 +12,6 @@ namespace SmartAdminMvc.Controllers
         private readonly IPaisAppService _paisAppService;
         private readonly IEstadoAppService _estadoAppService;
         private readonly ICidadeAppService _cidadeAppService;
-
         public ClientesController()
         {
             _clienteAppService = new ClienteAppService();
@@ -20,8 +19,6 @@ namespace SmartAdminMvc.Controllers
             _estadoAppService = new EstadoAppService();
             _cidadeAppService = new CidadeAppService();
         }
-
-
         public ActionResult Index()
         {
             return View(_clienteAppService.ObterAtivos());
@@ -39,7 +36,6 @@ namespace SmartAdminMvc.Controllers
             }
             return View(clienteViewModel);
         }
-
         public ActionResult Create()
         {
             ViewBag.ListaPaises = new SelectList(_paisAppService.ObteTodos(), "Id", "Descricao");
@@ -47,7 +43,6 @@ namespace SmartAdminMvc.Controllers
             ViewBag.ListaCidade = new SelectList(_cidadeAppService.ObteTodos(), "Id", "Cidades");
             return View();
         }
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(ClienteEnderecoViewModel clienteenderecoViewModel)

@@ -9,11 +9,12 @@ namespace RM.Aula.Application.AutoMapper
         public DomainToViewModelMappings()
         {
             CreateMap<Cliente, ClienteViewModel>();
+
             CreateMap<Cliente, ClienteEnderecoViewModel>();
             CreateMap<Endereco, EnderecoViewModel>();
             CreateMap<Endereco, ClienteEnderecoViewModel>();
-            CreateMap<Pais, PaisViewModel>();
-            CreateMap<Cidade, CidadeViewModel>();
+            //CreateMap<Pais, PaisViewModel>();
+            //CreateMap<Cidade, CidadeViewModel>();
             CreateMap<Estado, EstadoViewModel>();
 
 

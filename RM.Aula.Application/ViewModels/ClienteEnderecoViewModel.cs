@@ -9,9 +9,6 @@ namespace RM.Aula.Application.ViewModels
     public class ClienteEnderecoViewModel
     {
         public ClienteViewModel Cliente { get; set; }
-        public EnderecoViewModel Endereco { get; set; }
-
-        public PaisViewModel Pais { get; set; }
-        public EstadoViewModel Estado { get; set; }
+        public EnderecoViewModel Endereco { get; set; }        
     }
 }

@@ -9,9 +9,9 @@ namespace RM.Aula.Application.ViewModels
     {
         public EstadoViewModel()
         {
-            Id = Guid.NewGuid();     
+            Id = Guid.NewGuid();
         }
-        
+
         [Key]
         public Guid Id { get; set; }
         [Required(ErrorMessage = "Preencha a Sigla")]
@@ -21,8 +21,7 @@ namespace RM.Aula.Application.ViewModels
         [Required(ErrorMessage = "Preencha a Descrição do estado")]
         [MaxLength(20, ErrorMessage = "Máximo {0} caracteres")]
         [MinLength(20, ErrorMessage = "Mínimo {0} caracteres")]
-        public string Descricao { get; set; }
-        [ScaffoldColumn(false)]
+        public string Descricao { get; set; }        
         public Guid IdPais { get; set; }
         public virtual PaisViewModel Pais { get; set; }
         public virtual IEnumerable<CidadeViewModel> Cidades { get; set; }

@@ -4,7 +4,7 @@ using RM.Aula.Domain.Entities;
 
 namespace RM.Aula.Application.AutoMapper
 {
-    internal class ToViewModelDomainMappings : Profile
+    public class ToViewModelDomainMappings : Profile
     {
         public ToViewModelDomainMappings()
         {
@@ -13,7 +13,7 @@ namespace RM.Aula.Application.AutoMapper
             CreateMap<EnderecoViewModel, Endereco>();
             CreateMap<ClienteEnderecoViewModel, Endereco>();
             CreateMap<PaisViewModel, Pais>();
-            CreateMap<CidadeViewModel, Cidade>();
+            //CreateMap<CidadeViewModel, Cidade>();
             CreateMap<EstadoViewModel, Estado>();
         }
     }

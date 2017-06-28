@@ -4,6 +4,11 @@ namespace RM.Aula.Domain.Entities
 {
     public class Estado : EntityBase
     {
+        public Estado()
+        {
+            Cidades = new List<Cidade>();
+        }
+
         public string Sigla { get; set; }
         public string Descricao { get; set; }
         public Guid IdPais { get; set; }
