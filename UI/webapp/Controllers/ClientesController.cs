@@ -9,15 +9,15 @@ namespace SmartAdminMvc.Controllers
     public class ClientesController : Controller
     {
         private readonly IClienteAppService _clienteAppService;
-        private readonly IPaisAppService _paisAppService;
-        private readonly IEstadoAppService _estadoAppService;
-        private readonly ICidadeAppService _cidadeAppService;
+        //private readonly IPaisAppService _paisAppService;
+        //private readonly IEstadoAppService _estadoAppService;
+        //private readonly ICidadeAppService _cidadeAppService;
         public ClientesController()
         {
             _clienteAppService = new ClienteAppService();
-            _paisAppService = new PaisAppService();
-            _estadoAppService = new EstadoAppService();
-            _cidadeAppService = new CidadeAppService();
+            //_paisAppService = new PaisAppService();
+            //_estadoAppService = new EstadoAppService();
+            //_cidadeAppService = new CidadeAppService();
         }
         public ActionResult Index()
         {
@@ -38,9 +38,9 @@ namespace SmartAdminMvc.Controllers
         }
         public ActionResult Create()
         {
-            ViewBag.ListaPaises = new SelectList(_paisAppService.ObteTodos(), "Id", "Descricao");
-            ViewBag.ListaEstados = new SelectList(_estadoAppService.ObteTodos(), "Id", "Descricao");
-            ViewBag.ListaCidade = new SelectList(_cidadeAppService.ObteTodos(), "Id", "Cidades");
+            //ViewBag.ListaPaises = new SelectList(_paisAppService.ObteTodos(), "Id", "Descricao");
+            //ViewBag.ListaEstados = new SelectList(_paisAppService.ObteTodos(), "Id", "Descricao");
+            //ViewBag.ListaCidade = new SelectList(_paisAppService.ObteTodos(), "Id", "Descricao");
             return View();
         }
         [HttpPost]

@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 namespace RM.Aula.Application.ViewModels
 {
     public class ClienteViewModel
-    {
+    {        
+
         public ClienteViewModel()
         {
             Id = Guid.NewGuid();

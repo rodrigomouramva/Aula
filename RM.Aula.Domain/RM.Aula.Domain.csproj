@@ -40,16 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Cidade.cs" />
     <Compile Include="Entities\Cliente.cs" />
     <Compile Include="Entities\Endereco.cs" />
     <Compile Include="Entities\EntityBase.cs" />
-    <Compile Include="Entities\Estado.cs" />
-    <Compile Include="Entities\Pais.cs" />
-    <Compile Include="Interfaces\ICidadeRepository.cs" />
     <Compile Include="Interfaces\IClienteRepository.cs" />
-    <Compile Include="Interfaces\IEstadoRepository.cs" />
-    <Compile Include="Interfaces\IPaisRepository.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
