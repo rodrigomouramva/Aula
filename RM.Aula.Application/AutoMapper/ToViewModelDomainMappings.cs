@@ -13,7 +13,9 @@ namespace RM.Aula.Application.AutoMapper
             CreateMap<ClienteViewModel, Cliente>();
             CreateMap<ClienteEnderecoViewModel, Cliente>();
             CreateMap<EnderecoViewModel, Endereco>();
-            CreateMap<ClienteEnderecoViewModel, Endereco>();            
+            CreateMap<ClienteEnderecoViewModel, Endereco>();
+            CreateMap<PaisViewModel, Pais>();
+            CreateMap<EstadoViewModel, Estado>();
         }
     }
 }

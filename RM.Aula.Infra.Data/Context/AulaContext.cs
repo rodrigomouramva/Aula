@@ -12,14 +12,14 @@ namespace RM.Aula.Infra.Data.Context
 {
     public class AulaContext : DbContext
     {
-        public AulaContext(): base("DefaultConnection")
-        {                
+        public AulaContext() : base("DefaultConnection")
+        {
         }
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Endereco> Enderecos { get; set; }
-        //public DbSet<Estado> Estados { get; set; }
+        public DbSet<Estado> Estados { get; set; }
         //public DbSet<Cidade> Cidades { get; set; }
-        //public DbSet<Pais> Paises { get; set; }
+        public DbSet<Pais> Paises { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
@@ -28,8 +28,8 @@ namespace RM.Aula.Infra.Data.Context
             modelBuilder.Configurations.Add(new ClienteConfig());
             modelBuilder.Configurations.Add(new EnderecoConfig());
             //modelBuilder.Configurations.Add(new CidadeConfig());
-            //modelBuilder.Configurations.Add(new EstadoConfig());
-            //modelBuilder.Configurations.Add(new PaisConfig());
+            modelBuilder.Configurations.Add(new EstadoConfig());
+            modelBuilder.Configurations.Add(new PaisConfig());
 
             modelBuilder.Properties<string>()
                 .Configure(x => x.HasColumnType("varchar"));
