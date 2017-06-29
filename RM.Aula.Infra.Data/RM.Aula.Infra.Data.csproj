@@ -51,12 +51,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\AulaContext.cs" />
+    <Compile Include="EntityConfig\CidadeConfig.cs" />
     <Compile Include="EntityConfig\ClienteConfig.cs" />
     <Compile Include="EntityConfig\EnderecoConfig.cs" />
     <Compile Include="EntityConfig\EstadoConfig.cs" />
     <Compile Include="EntityConfig\PaisConfig.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\CidadeRepository.cs" />
     <Compile Include="Repositories\ClienteRepository.cs" />
     <Compile Include="Repositories\EstadoRepository.cs" />
     <Compile Include="Repositories\PaisRepository.cs" />

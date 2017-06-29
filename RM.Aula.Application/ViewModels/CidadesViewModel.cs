@@ -6,17 +6,15 @@ using System.Threading.Tasks;
 
 namespace RM.Aula.Application.ViewModels
 {
-    public class EstadoViewModel
+    public class CidadesViewModel
     {
-        public EstadoViewModel()
+        public CidadesViewModel()
         {
             Id = Guid.NewGuid();
         }
         public Guid Id { get; set; }
-        public Guid IdPais { get; set; }
-        public string Sigla { get; set; }
+        public Guid IdEstado { get; set; }
         public string Descricao { get; set; }
-        public virtual PaisViewModel Paises { get; set; }
-        public virtual IEnumerable<CidadesViewModel> Cidades { get; set; }
+        public virtual EstadoViewModel Estados { get; set; }
     }
 }

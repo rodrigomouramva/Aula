@@ -12,5 +12,6 @@ namespace RM.Aula.Domain.Entities
         public string Sigla { get; set; }
         public string Descricao { get; set; }
         public virtual Pais Paises { get; set; }
+        public virtual ICollection<Cidade> Cidades { get; set; }
     }
 }
