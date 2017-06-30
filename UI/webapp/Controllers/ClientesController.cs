@@ -43,10 +43,15 @@ namespace SmartAdminMvc.Controllers
             ViewBag.ListaPaises = new SelectList(_paisAppService.ObteTodos(), "Id", "Descricao");            
             return View();
         }
+
+        
         public JsonResult getstate(Guid id)
         {
             return Json(new SelectList(_estadoAppService.ObterEstado(id), "Id", "Descricao", JsonRequestBehavior.AllowGet));
+
         }
+
+        
         public JsonResult getcity(Guid id)
         {
             return Json(new SelectList(_cidadeAppService.ObterCidade(id), "Id", "Descricao", JsonRequestBehavior.AllowGet));

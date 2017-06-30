@@ -80,10 +80,10 @@
                                 @*<form asp-controller="Account" asp-action="Register" method="post" id="signupform" role="form"></form>*@
 
                                 @using (Html.BeginForm(null, null, new { @id = string.Empty }, FormMethod.Post, new { @id = "wizard-1" }))
-                                {                      
-                                
+                                {
 
-                                @*<form id="wizard-1" novalidate="novalidate">*@
+
+                                    @*<form id="wizard-1" novalidate="novalidate">*@
                                     <div id="bootstrap-wizard-1" class="col-sm-12">
                                         <div class="form-bootstrapWizard">
                                             <ul class="bootstrapWizard form-wizard">
@@ -190,36 +190,36 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    @*<div class="row">
-                                                        <div class="col-sm-4">
-                                                            <div class="form-group">
-                                                                <div class="input-group">
-                                                                    <span class="input-group-addon"><i class="fa fa-flag fa-lg fa-fw"></i></span>
-                                                                    @Html.DropDownList("country", (IEnumerable<SelectListItem>)ViewBag.ListaPaises, "Selecione o país", new { @class = "form-control input-lg" })
+                                                    <div class="row">
+                                                            <div class="col-sm-4">
+                                                                <div class="form-group">
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-addon"><i class="fa fa-flag fa-lg fa-fw"></i></span>
+                                                                        @Html.DropDownList("country", (IEnumerable<SelectListItem>)ViewBag.ListaPaises, "Selecione o país", new { @class = "form-control input-lg" })
+                                                                    </div>
+                                                                    @Html.ValidationMessageFor(model => model.Endereco.Pais, "", new { @class = "text-danger" })
                                                                 </div>
-                                                                @Html.ValidationMessageFor(model => model.Endereco.Pais, "", new { @class = "text-danger" })
                                                             </div>
-                                                        </div>
-                                                        <div class="col-sm-4">
-                                                            <div class="form-group">
-                                                                <div class="input-group">
-                                                                    <span class="input-group-addon"><i class="fa fa-map-marker fa-lg fa-fw"></i></span>
-                                                                    @Html.DropDownList("State", new SelectList(string.Empty, "Value", "Text"), "Selecione o estado", new { @class = "form-control input-lg" })
+                                                            <div class="col-sm-4">
+                                                                <div class="form-group">
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-addon"><i class="fa fa-map-marker fa-lg fa-fw"></i></span>
+                                                                        @Html.DropDownList("State", new SelectList(string.Empty, "Value", "Text"), "Selecione o estado", new { @class = "form-control input-lg" })
+                                                                    </div>
+                                                                    @Html.ValidationMessageFor(model => model.Endereco.Estado, "", new { @class = "text-danger" })
                                                                 </div>
-                                                                @Html.ValidationMessageFor(model => model.Endereco.Estado, "", new { @class = "text-danger" })
                                                             </div>
-                                                        </div>
-                                                        <div class="col-sm-4">
-                                                            <div class="form-group">
-                                                                <div class="input-group">
-                                                                    <span class="input-group-addon"><i class="fa fa-map-marker fa-lg fa-fw"></i></span>
-                                                                    @Html.DropDownList("City", new SelectList(string.Empty, "Value", "Text"), "Selecione a cidade", new { @class = "form-control input-lg" })
+                                                            <div class="col-sm-4">
+                                                                <div class="form-group">
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-addon"><i class="fa fa-map-marker fa-lg fa-fw"></i></span>
+                                                                        @Html.DropDownList("City", new SelectList(string.Empty, "Value", "Text"), "Selecione a cidade", new { @class = "form-control input-lg" })
+                                                                    </div>
+                                                                    @Html.ValidationMessageFor(model => model.Endereco.Cidade, "", new { @class = "text-danger" })
                                                                 </div>
-                                                                @Html.ValidationMessageFor(model => model.Endereco.Cidade, "", new { @class = "text-danger" })
                                                             </div>
-                                                        </div>
 
-                                                    </div>*@
+                                                        </div>
                                                 </div>
 
                                                 <div class="tab-pane" id="tab3">
@@ -302,7 +302,7 @@
 
                                         </div>
                                     </div>
-                                @*</form>*@
+                                    @*</form>*@
 
                                 }
 
@@ -336,6 +336,44 @@
     <script src="/scripts/plugin/fuelux/wizard/wizard.min.js"></script>
 
     <script type="text/javascript">
+
+
+        
+
+@*@{
+var values = ViewData.ModelMetadata.AdditionalValues;
+string orgFieldId = (string)values["orgFieldId"];
+string fieldId = (string)values["fieldId"];
+}
+<script type="text/javascript">
+$(document).ready(function () {
+    $("#@orgFieldId").change(function () {
+        var idProd = $(this).val();
+        $.getJSON("/JsonService/GetAccounts", { orgId: idProd },
+            function (myData) {
+                var select = $("#@fieldId");
+                select.empty();
+                $.each(myData, function (index, itemData) {
+                    select.append($('<option/>', {
+                        value: itemData.Value,
+                        text: itemData.Text
+                    }));
+                });
+            });
+    });
+});*@
+
+
+
+
+
+
+
+
+
+
+
+
 
         $(document).ready(function () {
             $("#country").change(function () {
