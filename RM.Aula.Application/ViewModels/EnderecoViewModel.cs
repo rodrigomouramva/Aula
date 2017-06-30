@@ -40,17 +40,17 @@ namespace RM.Aula.Application.ViewModels
         [MinLength(8, ErrorMessage = "Mínimo {0} caracteres")]
         public string CEP { get; set; }
 
-        [Required(ErrorMessage = "Preencha o campo Cidade")]
+        
         [MaxLength(50, ErrorMessage = "Máximo {0} caracteres")]
         [MinLength(2, ErrorMessage = "Mínimo {0} caracteres")]
         public string Cidade { get; set; }
 
-        [Required(ErrorMessage = "Preencha o campo Estado")]
+        
         [MaxLength(30, ErrorMessage = "Máximo {0} caracteres")]
         [MinLength(2, ErrorMessage = "Mínimo {0} caracteres")]
         public string Estado { get; set; }
 
-        [Required(ErrorMessage = "Preencha o campo País")]
+        
         [MaxLength(30, ErrorMessage = "Máximo {0} caracteres")]
         [MinLength(2, ErrorMessage = "Mínimo {0} caracteres")]
         public string Pais { get; set; }

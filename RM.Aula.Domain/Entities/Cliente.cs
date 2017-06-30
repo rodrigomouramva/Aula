@@ -16,6 +16,8 @@ namespace RM.Aula.Domain.Entities
         public DateTime DataCadastro { get; set; }
         public bool Ativo { get; set; }
         public bool Excluido { get; set; }
+        public string Celular { get; set; }
+        public string Telefone { get; set; }
         public virtual ICollection<Endereco> Enderecos { get; set; }
     }
 }

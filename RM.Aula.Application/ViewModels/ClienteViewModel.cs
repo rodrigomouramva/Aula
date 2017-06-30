@@ -52,6 +52,14 @@ namespace RM.Aula.Application.ViewModels
 
         [ScaffoldColumn(false)]
         public bool Excluido { get; set; }
+        [Display(Name = "Celular")]
+        [DisplayFormat(DataFormatString = "{0:#####-####}")]
+        public string Celular { get; set; }
+
+        [Required(ErrorMessage = "Preencha o campo Telefone")]
+        [Display(Name = "Telefone")]
+        [DisplayFormat(DataFormatString = "{0:#####-####}")]
+        public string Telefone { get; set; }
 
         public IEnumerable<EnderecoViewModel> Enderecos { get; set; }
     }
