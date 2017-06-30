@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace RM.Aula.Application.Interfaces
 {
     public interface IEstadoAppService : IDisposable
-    {
-        IEnumerable<EstadoViewModel> ObterTodos();
+    {        
+        IEnumerable<EstadoViewModel> ObterEstado(Guid id);
     }
 }

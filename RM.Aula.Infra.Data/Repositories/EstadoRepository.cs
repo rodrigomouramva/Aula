@@ -1,4 +1,5 @@
-﻿using RM.Aula.Domain.Entities;
+﻿using Dapper;
+using RM.Aula.Domain.Entities;
 using RM.Aula.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -10,9 +11,9 @@ namespace RM.Aula.Infra.Data.Repositories
 {
     public class EstadoRepository : Repository<Estado>, IEstadoRepository
     {
-        //public IEnumerable<Estado> ObterEstado()
-        //{
-        //    return Buscar(e => e.Id != null);
-        //}
+        public IEnumerable<Estado> ObterEstado(Guid id)
+        {
+            return Buscar(c => c.IdPais == id).ToList();
+        }
     }
 }

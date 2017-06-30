@@ -11,6 +11,7 @@ namespace RM.Aula.Domain.Entities
         public string CEP { get; set; }
         public string Cidade { get; set; }
         public string Estado { get; set; }
+        public string Pais { get; set; }
         public Guid ClienteId { get; set; }
         // Propriedade de Navegacao do EF
         public virtual Cliente Cliente { get; set; }

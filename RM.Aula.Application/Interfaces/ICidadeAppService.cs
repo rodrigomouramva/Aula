@@ -9,6 +9,6 @@ namespace RM.Aula.Application.Interfaces
 {
     public interface ICidadeAppService :IDisposable
     {
-        IEnumerable<CidadesViewModel> ObterTodos();
+        IEnumerable<CidadesViewModel> ObterCidade(Guid id);
     }
 }

@@ -10,5 +10,9 @@ namespace RM.Aula.Infra.Data.Repositories
 {
     public class CidadeRepository : Repository<Cidade>, ICidadeRepository
     {
+        public IEnumerable<Cidade> ObterCidade(Guid id)
+        {
+            return Buscar(c => c.IdEstado == id).ToList();
+        }
     }
 }

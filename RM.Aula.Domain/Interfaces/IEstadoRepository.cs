@@ -9,6 +9,6 @@ namespace RM.Aula.Domain.Interfaces
 {
     public interface IEstadoRepository : IRepository<Estado>
     {
-        //IEnumerable<Estado> ObterEstado();
+        IEnumerable<Estado> ObterEstado(Guid id);
     }
 }

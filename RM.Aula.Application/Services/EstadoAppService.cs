@@ -17,15 +17,14 @@ namespace RM.Aula.Application.Services
         public EstadoAppService()
         {
             _estadoRepository = new EstadoRepository();
-        }
-       
-        public IEnumerable<EstadoViewModel> ObterTodos()
+        }        
+        public IEnumerable<EstadoViewModel> ObterEstado(Guid id)
         {
-            return Mapper.Map<IEnumerable<EstadoViewModel>>(_estadoRepository.ObterTodos());
+            return Mapper.Map<IEnumerable<EstadoViewModel>>(_estadoRepository.ObterEstado(id));
         }
         public void Dispose()
         {
             _estadoRepository.Dispose();
-        }
+        }        
     }
 }

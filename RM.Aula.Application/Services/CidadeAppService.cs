@@ -14,20 +14,17 @@ namespace RM.Aula.Application.Services
     public class CidadeAppService : ICidadeAppService
     {
         private readonly ICidadeRepository _cidadeRepository;
-
         public CidadeAppService()
         {
             _cidadeRepository = new CidadeRepository();
         }
-
         public void Dispose()
         {
             _cidadeRepository.Dispose();
         }
-
-        public IEnumerable<CidadesViewModel> ObterTodos()
+        public IEnumerable<CidadesViewModel> ObterCidade(Guid id)
         {
-            return Mapper.Map<IEnumerable<CidadesViewModel>>(_cidadeRepository.ObterTodos());
-        }
+            return Mapper.Map<IEnumerable<CidadesViewModel>>(_cidadeRepository.ObterCidade(id));
+        }        
     }
 }

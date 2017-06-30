@@ -2,6 +2,8 @@
 using RM.Aula.Application.Services;
 using RM.Aula.Application.ViewModels;
 using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Net;
 using System.Web.Mvc;
 namespace SmartAdminMvc.Controllers
@@ -38,10 +40,16 @@ namespace SmartAdminMvc.Controllers
         }
         public ActionResult Create()
         {
-            ViewBag.ListaPaises = new SelectList(_paisAppService.ObteTodos(), "Id", "Descricao");
-            ViewBag.ListaEstados = new SelectList(_estadoAppService.ObterTodos(), "Id", "Descricao");
-            ViewBag.ListaCidade = new SelectList(_cidadeAppService.ObterTodos(), "Id", "Descricao");
+            ViewBag.ListaPaises = new SelectList(_paisAppService.ObteTodos(), "Id", "Descricao");            
             return View();
+        }
+        public JsonResult getstate(Guid id)
+        {
+            return Json(new SelectList(_estadoAppService.ObterEstado(id), "Id", "Descricao", JsonRequestBehavior.AllowGet));
+        }
+        public JsonResult getcity(Guid id)
+        {
+            return Json(new SelectList(_cidadeAppService.ObterCidade(id), "Id", "Descricao", JsonRequestBehavior.AllowGet));
         }
         [HttpPost]
         [ValidateAntiForgeryToken]

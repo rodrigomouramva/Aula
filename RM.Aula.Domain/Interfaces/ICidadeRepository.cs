@@ -9,5 +9,6 @@ namespace RM.Aula.Domain.Interfaces
 {
     public interface ICidadeRepository : IRepository<Cidade>
     {
+        IEnumerable<Cidade> ObterCidade(Guid id);
     }
 }

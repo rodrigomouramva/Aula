@@ -41,16 +41,26 @@ namespace RM.Aula.Application.ViewModels
         public string CEP { get; set; }
 
         [Required(ErrorMessage = "Preencha o campo Cidade")]
-        [MaxLength(100, ErrorMessage = "Máximo {0} caracteres")]
+        [MaxLength(50, ErrorMessage = "Máximo {0} caracteres")]
         [MinLength(2, ErrorMessage = "Mínimo {0} caracteres")]
         public string Cidade { get; set; }
 
         [Required(ErrorMessage = "Preencha o campo Estado")]
-        [MaxLength(100, ErrorMessage = "Máximo {0} caracteres")]
+        [MaxLength(30, ErrorMessage = "Máximo {0} caracteres")]
         [MinLength(2, ErrorMessage = "Mínimo {0} caracteres")]
         public string Estado { get; set; }
 
+        [Required(ErrorMessage = "Preencha o campo País")]
+        [MaxLength(30, ErrorMessage = "Máximo {0} caracteres")]
+        [MinLength(2, ErrorMessage = "Mínimo {0} caracteres")]
+        public string Pais { get; set; }
+
         [ScaffoldColumn(false)]
         public Guid ClienteId { get; set; }
+
+        
+
+
+
     }
 }

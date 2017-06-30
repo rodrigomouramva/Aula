@@ -1,5 +1,4 @@
 ﻿@model RM.Aula.Application.ViewModels.ClienteEnderecoViewModel
-
 @{
     ViewBag.Title = "Create";
 }
@@ -80,16 +79,16 @@
                                         <div class="form-bootstrapWizard">
                                             <ul class="bootstrapWizard form-wizard">
                                                 <li class="active" data-target="#step1">
-                                                    <a href="#tab1" data-toggle="tab"> <span class="step">1</span> <span class="title">Basic information</span> </a>
+                                                    <a href="#tab1" data-toggle="tab"> <span class="step">1</span> <span class="title">Informação básica</span> </a>
                                                 </li>
                                                 <li data-target="#step2">
-                                                    <a href="#tab2" data-toggle="tab"> <span class="step">2</span> <span class="title">Billing information</span> </a>
+                                                    <a href="#tab2" data-toggle="tab"> <span class="step">2</span> <span class="title">Endereço</span> </a>
                                                 </li>
                                                 <li data-target="#step3">
-                                                    <a href="#tab3" data-toggle="tab"> <span class="step">3</span> <span class="title">Domain Setup</span> </a>
+                                                    <a href="#tab3" data-toggle="tab"> <span class="step">3</span> <span class="title">Contato</span> </a>
                                                 </li>
                                                 <li data-target="#step4">
-                                                    <a href="#tab4" data-toggle="tab"> <span class="step">4</span> <span class="title">Save Form</span> </a>
+                                                    <a href="#tab4" data-toggle="tab"> <span class="step">4</span> <span class="title">Salvar</span> </a>
                                                 </li>
                                             </ul>
                                             <div class="clearfix"></div>
@@ -97,7 +96,7 @@
                                         <div class="tab-content">
                                             <div class="tab-pane active" id="tab1">
                                                 <br>
-                                                <h3><strong>Step 1 </strong> - Informação básica</h3>
+                                                <h3><strong>Cadastro</strong> - Informação básica</h3>
 
                                                 <div class="row">
 
@@ -105,9 +104,7 @@
                                                         <div class="form-group">
                                                             <div class="input-group">
                                                                 <span class="input-group-addon"><i class="fa fa-envelope fa-lg fa-fw"></i></span>
-                                                                @*<input class="form-control input-lg" placeholder="email@address.com" type="text" name="email" id="email">*@
                                                                 @Html.EditorFor(model => model.Cliente.Email, new { htmlAttributes = new { @class = "form-control input-lg", placeholder = Html.DisplayNameFor(n => n.Cliente.Email) } })
-
                                                             </div>
                                                             @Html.ValidationMessageFor(model => model.Cliente.Email, "", new { @class = "text-danger" })
                                                         </div>
@@ -121,62 +118,109 @@
                                                         <div class="form-group">
                                                             <div class="input-group">
                                                                 <span class="input-group-addon"><i class="fa fa-user fa-lg fa-fw"></i></span>
-                                                                @*<input class="form-control input-lg" placeholder="First Name" type="text" name="fname" id="fname">*@
-
                                                                 @Html.EditorFor(model => model.Cliente.Nome, new { htmlAttributes = new { @class = "form-control input-lg", placeholder = Html.DisplayNameFor(n => n.Cliente.Nome) } })
-                                                                @Html.ValidationMessageFor(model => model.Cliente.Nome, "", new { @class = "text-danger" })
-
                                                             </div>
+                                                            @Html.ValidationMessageFor(model => model.Cliente.Nome, "", new { @class = "text-danger" })
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-6">
                                                         <div class="form-group">
                                                             <div class="input-group">
                                                                 <span class="input-group-addon"><i class="fa fa-user fa-lg fa-fw"></i></span>
-                                                                @*<input class="form-control input-lg" placeholder="Last Name" type="text" name="lname" id="lname">*@
-
                                                                 @Html.EditorFor(model => model.Cliente.Sobrenome, new { htmlAttributes = new { @class = "form-control input-lg", placeholder = Html.DisplayNameFor(n => n.Cliente.Sobrenome) } })
-                                                                @Html.ValidationMessageFor(model => model.Cliente.Sobrenome, "", new { @class = "text-danger" })
-
                                                             </div>
+                                                            @Html.ValidationMessageFor(model => model.Cliente.Sobrenome, "", new { @class = "text-danger" })
                                                         </div>
                                                     </div>
                                                 </div>
 
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="fa fa-user fa-lg fa-fw"></i></span>
+                                                                @Html.EditorFor(model => model.Cliente.CPF, new { htmlAttributes = new { @class = "form-control input-lg", placeholder = Html.DisplayNameFor(n => n.Cliente.CPF) } })
+                                                            </div>
+                                                            @Html.ValidationMessageFor(model => model.Cliente.CPF, "", new { @class = "text-danger" })
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="fa fa-user fa-lg fa-fw"></i></span>
+                                                                @Html.EditorFor(model => model.Cliente.DataNascimento, new { htmlAttributes = new { @class = "form-control input-lg", placeholder = "Data Nascimento" } })
+                                                            </div>
+                                                            @Html.ValidationMessageFor(model => model.Cliente.DataNascimento, "", new { @class = "text-danger" })
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="tab-pane" id="tab2">
                                                 <br>
-                                                <h3><strong>Step 2</strong> - Billing Information</h3>
+                                                <h3><strong>Cadastro</strong> - Endereço</h3>
 
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <div class="form-group">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="fa fa-envelope fa-lg fa-fw"></i></span>
+                                                                @Html.EditorFor(model => model.Endereco.Logradouro, new { htmlAttributes = new { @class = "form-control input-lg", placeholder = Html.DisplayNameFor(n => n.Endereco.Logradouro) } })
+                                                            </div>
+                                                            @Html.ValidationMessageFor(model => model.Endereco.Logradouro, "", new { @class = "text-danger" })
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="fa fa-envelope fa-lg fa-fw"></i></span>
+                                                                @Html.EditorFor(model => model.Endereco.Bairro, new { htmlAttributes = new { @class = "form-control input-lg", placeholder = Html.DisplayNameFor(n => n.Endereco.Bairro) } })
+                                                            </div>
+                                                            @Html.ValidationMessageFor(model => model.Endereco.Bairro, "", new { @class = "text-danger" })
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="fa fa-envelope fa-lg fa-fw"></i></span>
+                                                                @Html.EditorFor(model => model.Endereco.CEP, new { htmlAttributes = new { @class = "form-control input-lg", placeholder = Html.DisplayNameFor(n => n.Endereco.CEP) } })
+                                                            </div>
+                                                            @Html.ValidationMessageFor(model => model.Endereco.CEP, "", new { @class = "text-danger" })
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class="row">
                                                     <div class="col-sm-4">
                                                         <div class="form-group">
                                                             <div class="input-group">
                                                                 <span class="input-group-addon"><i class="fa fa-flag fa-lg fa-fw"></i></span>
+                                                                @Html.DropDownList("country", (IEnumerable<SelectListItem>)ViewBag.ListaPaises, "Selecione o país", new { @class = "form-control input-lg" })
+                                                            </div>
+                                                            @Html.ValidationMessageFor(model => model.Endereco.Pais, "", new { @class = "text-danger" })
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <div class="form-group">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="fa fa-map-marker fa-lg fa-fw"></i></span>
+                                                                @Html.DropDownList("State", new SelectList(string.Empty, "Value", "Text"), "Selecione o estado", new { @class = "form-control input-lg" })
+                                                            </div>
+                                                            @Html.ValidationMessageFor(model => model.Endereco.Estado, "", new { @class = "text-danger" })
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <div class="form-group">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="fa fa-map-marker fa-lg fa-fw"></i></span>
+                                                                @Html.DropDownList("City", new SelectList(string.Empty, "Value", "Text"), "Selecione a cidade", new { @class = "form-control input-lg" })
+                                                            </div>
+                                                            @Html.ValidationMessageFor(model => model.Endereco.Cidade, "", new { @class = "text-danger" })
+                                                        </div>
+                                                    </div>
 
-                                                                @Html.DropDownList("ListaPaises", null, new { @class = "form-control input-lg", @placeholder = "Select País", })
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-4">
-                                                        <div class="form-group">
-                                                            <div class="input-group">
-                                                                <span class="input-group-addon"><i class="fa fa-map-marker fa-lg fa-fw"></i></span>
-                                                               @Html.DropDownList("ListaEstados", null, new { @class = "form-control input-lg", @placeholder = "Selecione o estado", })
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-4">
-                                                        <div class="form-group">
-                                                            <div class="input-group">
-                                                                @*<span class="input-group-addon"><i class="fa fa-envelope-o fa-lg fa-fw"></i></span>*@
-                                                                @*<input class="form-control input-lg" placeholder="Postal Code" type="text" name="postal" id="postal">*@
-                                                                <span class="input-group-addon"><i class="fa fa-map-marker fa-lg fa-fw"></i></span>
-                                                                @Html.DropDownList("ListaCidade", null, new { @class = "form-control input-lg", @placeholder = "Selecione o estado", })
-                                                            </div>
-                                                        </div>
-                                                    </div>
                                                 </div>
+
                                                 <div class="row">
                                                     <div class="col-sm-6">
                                                         <div class="form-group">
@@ -273,6 +317,53 @@
     <!-- PAGE RELATED PLUGIN(S) -->
     <script src="/scripts/plugin/bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
     <script src="/scripts/plugin/fuelux/wizard/wizard.min.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#country").change(function () {
+                $("#State").empty();
+                $.ajax({
+                    type: 'POST',
+                    url: '@Url.Action("getstate")',
+                dataType: 'json',
+                data: { id: $("#country").val() },
+                success: function (states) {
+                    $.each(states, function (i, state) {
+                        $("#State").append('<option value="' + state.Value + '">' +
+                             state.Text + '</option>');
+                    });
+                },
+                error: function (ex) {
+                    alert('Falha ao recuperar estados do país.' + ex);
+                }
+            });
+            return false;
+        })
+    });
+
+ $(document).ready(function () {
+     $("#State").change(function () {
+            $("#City").empty();
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("getcity")',
+                dataType: 'json',
+                data: { id: $("#State").val() },
+                success: function (states) {
+                    $.each(states, function (i, state) {
+                        $("#City").append('<option value="' + state.Value + '">' +
+                             state.Text + '</option>');
+                    });
+                },
+                error: function (ex) {
+                    alert('Falha ao recuperar cidades do estado.' + ex);
+                }
+            });
+            return false;
+        })
+ });
+    </script>
 
     <script type="text/javascript">
 
@@ -386,9 +477,9 @@
 
 @*<h2>Create</h2>
 
-        @using (Html.BeginForm())
-        {
-            @Html.AntiForgeryToken()
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
         <h4>ClienteViewModel</h4>
@@ -432,7 +523,7 @@
             </div>
         </div>
     </div>
-        }
+            }
 
     <div>
         @Html.ActionLink("Back to List", "Index")

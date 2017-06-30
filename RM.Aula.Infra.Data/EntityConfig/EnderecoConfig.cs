@@ -31,6 +31,21 @@ namespace RM.Aula.Infra.Data.EntityConfig
                 .HasMaxLength(8)
                 .IsFixedLength();
 
+            Property(e => e.Cidade)
+                .IsRequired()
+                .HasMaxLength(50)
+                .IsFixedLength();
+
+            Property(e => e.Estado)
+                .IsRequired()
+                .HasMaxLength(30)
+                .IsFixedLength();
+
+            Property(e => e.Pais)
+                .IsRequired()
+                .HasMaxLength(30)
+                .IsFixedLength();
+
             Property(e => e.Complemento)
                 .HasMaxLength(100);
 
