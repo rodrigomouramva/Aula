@@ -48,7 +48,6 @@ namespace SmartAdminMvc.Controllers
         public JsonResult getstate(Guid id)
         {
             return Json(new SelectList(_estadoAppService.ObterEstado(id), "Id", "Descricao", JsonRequestBehavior.AllowGet));
-
         }
 
         
